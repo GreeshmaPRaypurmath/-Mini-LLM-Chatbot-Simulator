@@ -33,6 +33,6 @@ satellites orbited the dying sun in silence
 
 
 # self intro
-my name is Greesham and I stay in Dharwad
+my name is Greesham and I stay in XYZ city
 I completed B.E in EC in the year 2024
 I'm skilled in python, MySQL and powerBI
