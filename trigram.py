@@ -32,20 +32,18 @@ def generate_text(model, start_words, length=10):
             break
 
     return ' '.join(output).capitalize()
-
-# Load corpus once
+    
 @st.cache_data
 def load_model():
     try:
-        with open('D:\\mini LLM chatbot\\bigram_app\\corpus.txt', 'r', encoding='utf-8') as f:
+        with open('D:\Mini LLM Chatbot Simulator\corpus.txt', 'r', encoding='utf-8') as f:
             text = f.read()
         words = tokenize(text)
         return build_trigram_model(words)
     except FileNotFoundError:
-        st.error("Missing 'corpus.txt'. Please place it in the app folder.")
+        st.error("Missing 'corpus.txt'. Please place it in the folder.")
         st.stop()
-
-# Streamlit UI
+        
 st.title("Trigram Text Generator")
 
 model = load_model()
